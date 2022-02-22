@@ -5359,7 +5359,7 @@ a[href^="https://maps.google.com/maps"] {
 ***************************/
 .about-style-one .about-content {
   /*text-align: center;*/
-  text-align: left;
+  text-align: justify;
   padding: 0 33px;
 }
 
@@ -8130,5 +8130,13 @@ a[href^="https://maps.google.com/maps"] {
   text-decoration: underline;
 }
 .result{
-  
+  text-align: center;
+    background-color: white;
+    padding: 50px 30px 30px;
+    font-size: 1.3em;
+    color: #0057B3;
+    font-weight: bold;
+}
+.error {
+    color: red;
 }
