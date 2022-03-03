@@ -2,7 +2,7 @@
 require 'PHPMailer/PHPMailerAutoload.php';
 $fields = array();
 $fields{"fname"} = "Nombre";
-$fields{"name"} = "Apellidos";
+$fields{"lname"} = "Apellidos";
 $fields{"email"} = "Email";
 $fields{"phone"} = "Teléfono";
 $fields{"cia"} = "Empresa";
@@ -19,13 +19,13 @@ $mail->setLanguage('es');
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'cmiperuconsulting@gmail.com';                 // SMTP username
-$mail->Password = 'Dor21335';                           // SMTP password
+$mail->Username = 'forminfocmi@gmail.com';                 // SMTP username
+$mail->Password = ' pw1567cmi';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('cmiperuconsulting@gmail.com', 'CMI Consulting');
-$mail->addAddress('form@cmiconsulting.pe', "CMI Consulting");     // Add a recipient
+$mail->setFrom('informes@cmiconsulting.pe', 'CMI Consulting');
+$mail->addAddress('informes@cmiconsulting.pe', "CMI Consulting");     // Add a recipient
 
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 $mail->isHTML(true);                                  // Set email format to HTML
@@ -37,5 +37,5 @@ if (!$mail->send()) {
     echo 'El mensaje no pudo enviarse';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'El mensaje fue enviado exitosamente';
+    echo '¡Gracias por contactarnos! <br>En breve, nos comunicaremos con Usted.';
 }

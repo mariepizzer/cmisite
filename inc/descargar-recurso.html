@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Solicitar Demo | CMI Consulting</title>
+    <title>Descargar Recurso | CMI Consulting</title>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -68,14 +68,17 @@
                                 <a href="business-intelligence.html">Business Intelligence</a>
                             </li>
                             <li>
-                                <a href="inteligencia-artificial.html">Inteligencia Artificial</a>
+                                <a href="inteligencia-artificial.html">IA</a>
                             </li>
                             <li>
-                                <a href="contactanos.html">Contáctanos</a>
+                                <a href="contactanos.html">Contacto</a>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
-                    
+                    <div class="right-side-box">
+                    <a href="solicitar-demo.html" target="new" class="signin-btn">Solicitar una DEMO</a>
+                    </div>
+                    <!-- /.right-side-box -->
                 </div>
                 <!-- /.container -->
             </nav>
@@ -88,24 +91,53 @@
                         <a href="index.html">Inicio</a>
                     </li>
                     <li>
-                        <span>Solicitar una DEMO</span>
+                        <span>Descargar Recurso</span>
                     </li>
                 </ul><!-- /.breadcrumb -->
-                <h1>Solicitar una DEMO</h1>
+                <h1>Descargar Recurso</h1>
             </div><!-- /.container -->
         </div><!-- /.inner-banner -->
 
         <section class="meeting-form-wrapper sec-pad">
             <div class="container">
-                <div class="sec-title text-center">
-                    <h2>Solicitar Demo</h2>
-                </div><!-- /.sec-title -->
                 <div class="row">
-                    <div class="col-lg-6" style="margin-left: auto; margin-right: auto;">
-                        <form action="inc/demo.php" class="meeting-form contact-form-vaidated">
+                    <div class="col-lg-6 d-flex">
+                        <div class="meeting-form-content my-auto">
+                            <div class="sec-title">
+                                <h2>Descargar Recurso</h2>
+                            </div><!-- /.sec-title -->
+                            <div class="single-form-step">
+                                <div class="count-box">
+                                    <div class="inner-box">
+                                        01
+                                    </div><!-- /.inner-box -->
+                                </div><!-- /.count-box -->
+                                <div class="text-box">
+                                    <h3>¿Cómo descargar un PDF?</h3>
+                                    <p>Complete todos los campos del formulario a continuación, es importante nos brinde
+                                        su información de manera correcta para enviar el enlace de descarga.</p>
+                                </div><!-- /.text-box -->
+                            </div><!-- /.single-form-step -->
+                            <div class="single-form-step">
+                                <div class="count-box">
+                                    <div class="inner-box">
+                                        02
+                                    </div><!-- /.inner-box -->
+                                </div><!-- /.count-box -->
+                                <div class="text-box">
+                                    <h3>¿Dónde se encuentra el PDF?</h3>
+                                    <p>Se enviará un enlace al correo que registro en el formulario, haciendo clic en el
+                                        enlace se iniciará la descarga.</p>
+                                </div><!-- /.text-box -->
+                            </div><!-- /.single-form-step -->
+
+                        </div><!-- /.meeting-form-content -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <form action="inc/download.php" class="meeting-form contact-form-vaidated">
                             <div class="row">
-                                <input type="hidden" name="subject" value="Solicitud de Demo">
                                 <div class="col-md-6" style="margin-top:10px;">
+                                    <input type="hidden" name="subject" value="Descargar recurso">
                                     <input type="text" name="fname" placeholder="Nombre">
                                 </div><!-- /.col-md-12 -->
                                 <div class="col-md-6">
@@ -115,26 +147,21 @@
                                     <input type="text" name="email" placeholder="Email">
                                 </div><!-- /.col-md-12 -->
                                 <div class="col-md-12">
-                                    <input type="text" name="phone" placeholder="Teléfono de contacto">
+                                    <input type="text" name="phone_optional" placeholder="Teléfono (Opcional)">
                                 </div><!-- /.col-md-6 -->
                                 <div class="col-md-12">
-                                    <input type="text" name="cia" placeholder="Empresa">
-                                </div><!-- /.col-md-12 -->
-                                <div class="col-md-12">
-                                    <input type="text" name="ruc" placeholder="RUC">
-                                </div><!-- /.col-md-12 -->
-                                <div class="col-md-12">
                                     <div class="btn-box">
-                                        <button type="submit" class="thm-btn">Solicitar una DEMO</button>
+                                        <button type="submit" class="thm-btn">Descargar PDF</button>
                                     </div><!-- /.btn-box -->
                                 </div><!-- /.col-md-12 -->
                             </div><!-- /.row -->
-                            <div class="result"></div><!-- /.result -->
                         </form><!-- /.meeting-form -->
+                        <div class="result"></div><!-- /.result -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.meeting-form-wrapper -->
+
 
         <footer class="site-footer">
             <div class="upper-footer">
@@ -178,8 +205,7 @@
                                             class="fa fa-facebook"></i></a>
                                     <a href="https://www.linkedin.com/company/cmi-consulting-group/" target="new"><i
                                             class="fa fa-linkedin"></i></a>
-                                    <a href="https://www.youtube.com/channel/UC83C_wizZ3dItVhjeP9VQjg" target="new"><i
-                                            class="fa fa-youtube-play"></i></a>
+                                    <a href="https://www.youtube.com/channel/UC83C_wizZ3dItVhjeP9VQjg" target="new"><i class="fa fa-youtube-play"></i></a>
                                 </div><!-- /.social -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-lg-5 -->
@@ -216,6 +242,8 @@
     <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/theme.js"></script>
+
+
 </body>
 
 </html>

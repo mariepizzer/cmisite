@@ -1,39 +1,47 @@
 <?php
 require 'PHPMailer/PHPMailerAutoload.php';
 $fields = array();
-$fields{"fname"} = "Nombre";
+
+
+$fields{"fname"} = "Nombre";                           //Input form fields from descargar-recurso.html
 $fields{"lname"} = "Apellidos";
 $fields{"email"} = "Email";
-$fields{"phone"} = "Teléfono";
+$fields{"phone_optional"} = "Teléfono";
 
-$body =  $_REQUEST['subject']  . ":<br><br>";
+$body_reader = "Hola, ". $_REQUEST['fname']  . ".<br>";             //Body
+$body_reader .= "¡Bienvenido a CMI Consulting Group!<br><br>";
+$body_reader .= "En adjunto te enviamos archivo solicitado.<br>";
+$body_reader .= "¡Que disfrutes la lectura!<br><br>";
+
+$body_reader .= "<span style='text-decoration: underline;'>Tu solicitud</span><br>";
+
 foreach ($fields as $a => $b) {
-    $body .= sprintf("%20s: <b>%s</b><br>", $b, $_REQUEST[$a]);
+    $body_reader .= sprintf("%20s: <b>%s</b><br>", $b, $_REQUEST[$a]);
 }
 
 $mail = new PHPMailer;
 $mail->setLanguage('es');
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'cmiperuconsulting@gmail.com';                 // SMTP username
-$mail->Password = 'Dor21335';                           // SMTP password
+$mail->Username = 'forminfocmi@gmail.com';            // SMTP username
+$mail->Password = ' pw1567cmi';                       // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('form@cmiconsulting.pe', 'CMI Consulting');
+$mail->setFrom('informes@cmiconsulting.pe', 'CMI Consulting');          //Sender
 $mail->addAddress($_REQUEST['email'], $_REQUEST['fname'] ." ". $_REQUEST['lname']);     // Add a recipient
 
-$mail->addAttachment('../descargas/Los-Procesos-de-Negocio.pdf');         // Add attachments
+$mail->addAttachment('../descargas/Los-Procesos-de-Negocio.pdf');         // Add attachments files
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject =  $_REQUEST['subject'];
-$mail->Body    = $body;
+$mail->Body    = $body_reader;
 
 if (!$mail->send()) {
     echo 'El mensaje no pudo enviarse';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'El mensaje fue enviado exitosamente';
+    echo '¡Gracias por contactarnos! <br> Revise su correo electrónico.';           //Output printed in descargar-recurso.html
 }

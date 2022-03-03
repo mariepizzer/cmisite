@@ -28,13 +28,16 @@
         $('.contact-form-vaidated').validate({ // initialize the plugin
             rules: {
                 name: {
-                    required: true
+                    required: true,
+                    minlength: 2,
                 },
                 fname: {
-                    required: true
+                    required: true,
+                    minlength: 2,
                 },
                 lname: {
-                    required: true
+                    required: true,
+                    minlength: 2,
                 },
                 email: {
                     required: true,
@@ -44,17 +47,31 @@
                     required: true
                 },
                 subject: {
-                    required: true
+                    required: true,
+                    minlength: 3,
                 },
                 cia: {
-                    required: true
+                    required: true,
+                    minlength: 3,
                 },
                 ruc: {
-                    required: true
+                    required: true,
+                    digits: true,
+                    minlength: 11,
+                    maxlength: 11
                 },
                 phone: {
-                    required: true
+                    required: true,
+                    digits: true,
+                    minlength: 7,
+                    maxlength: 11
                 },
+                phone_optional: {
+                    required: false,
+                    digits: true,
+                    minlength: 7,
+                    maxlength: 11                    
+                }
 
             },
             submitHandler: function (form, event) {

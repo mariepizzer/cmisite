@@ -749,17 +749,17 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .header-navigation .container .right-side-box a.signin-btn:hover {
-  background: #0f6fd5;
-  color: #fff;
-  /*background: #ffffff;
-  color: #001328;*/
+  background: #ffffff;
+  color: #001328;
+  /*background: #0f6fd5;
+  color: #fff;*/
 }
 
 .header-navigation .main-navigation {
-  float: right;
-  text-align: right;
-  /*float: none;
-  text-align: center;*/
+  float: none;
+  text-align: center;
+  /*float: right;
+  text-align: right;*/
 }
 
 @media (min-width: 1200px) {
@@ -5838,8 +5838,7 @@ a[href^="https://maps.google.com/maps"] {
   left: 0;
   width: calc(50% + 300px);
   height: 100%;
-  background: transparent;
-  /*background: #f1f7fc;*/
+  background: #f1f7fc;
 }
 
 .single-form-step {
@@ -5901,8 +5900,7 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .meeting-form {
-  padding: 30px;
-  /*padding: 100px;*/
+  padding: 100px;
   padding-right: 0;
   border-radius: 7px;
   background: #ffffff;
@@ -8131,6 +8129,14 @@ a[href^="https://maps.google.com/maps"] {
   font-size: 18px;
   text-decoration: underline;
 }
-.destacar {
-  margin-left: 2em;
+.result{
+  text-align: center;
+    background-color: white;
+    padding: 50px 30px 30px;
+    font-size: 1.3em;
+    color: #0057B3;
+    font-weight: bold;
+}
+.error {
+    color: red;
 }
